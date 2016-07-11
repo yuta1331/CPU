@@ -12,13 +12,13 @@ wire [23:0] white, red, blue, depth, lastrout;
 
 always @(posedge clk) begin
 if(!rst_n) begin
-		regfile[0]  <= 24'b0000_0000_0110_0011_0000_0000;//white
-		regfile[1]  <= 24'b0001_0000_0001_0100_0000_0001;//red
-		regfile[2]  <= 24'b0000_1101_0000_0000_0000_0010;//blue
+		regfile[0]  <= 24'b0000_0000_0000_1000_0011_0001;//white
+		regfile[1]  <= 24'b1001_0001_1000_0000_0000_0000;//red
+		regfile[2]  <= 24'b0010_1100_0000_0000_0000_0010;//blue
 		regfile[3]  <= 3;//xcounter //no used
 		regfile[4]  <= 3;//ycounter //no used
 		regfile[5]  <= 3;//zcounter //no used
-		regfile[6]  <= 13;//depth //memory's address
+		regfile[6]  <= 9;//depth //memory's address
 		regfile[7]  <= RTX0;//x_footprint
 		regfile[8]  <= RTY0;//y_footprint
 		regfile[9]  <= RTZ0;//z_footprint
