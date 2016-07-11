@@ -14,7 +14,7 @@ module test;
 		$dumpfile("test.vcd");
 		$dumpvars(0, top0);
 		$dumplimit(100000000);
-		$monitor($stime, "0:%b 1:%b 2:%b 3:%b 4:%b 5:%b 6:%b 7:%b 8:%b 9:%b 10:%b 11:%b 12:%b 13:%b 14:%b", mem0, mem1, mem2, mem3, mem4, mem5, mem6, mem7, mem8, mem9, mem10, mem11, mem12, mem13, mem14);
+		$monitor($stime, "mem0:%d mem1:%d mem2:%d mem3:%d mem4:%d mem5:%d mem6:%d mem7:%d mem8:%d mem9:%d", mem0, mem1, mem2, mem3, mem4, mem5, mem6, mem7, mem8, mem9);
 		rst_n = 0;
 		clk = 0;
 	#STEP

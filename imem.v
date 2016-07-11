@@ -85,57 +85,57 @@ always @(pc) begin
 		op[3:0] <= 0; // dc
 	end
 
-// comp
+// depth check
 	11 : begin
+		op[15:12] <= CHECK;
+		op[11:8] <= 6; // src1
+		op[7:0] <= 0; // depth = 0
+	end
+
+	12 : begin
+		op[15:12] <= JNO;
+		op[11:6] <= 0; // dc
+		op[7:0] <= 6; // go to 6
+	end
+
+// comp
+	13 : begin
 		op[15:12] <= COMP;
 		op[11:8] <= 0;//dc
 		op[7:4] <= 0;//src1
 		op[3:0] <= 10;//src0
 	end
 
-	12 : begin
+	14 : begin
 		op[15:12] <= JNO;
 		op[11:8] <= 0;//dc
-		op[7:0] <= 17;//go to 17
+		op[7:0] <= 19;//go to 19
 	end
 
-	13 : begin
+	15 : begin
 		op[15:12] <= COMP;
 		op[11:8] <= 0;//dc
 		op[7:4] <= 1; //src1
 		op[3:0] <= 11; //src0
 	end
 
-	14 : begin
+	16 : begin
 		op[15:12] <= JNO;
 		op[11:8] <= 0;//dc
-		op[7:0] <= 17; // go to 17
+		op[7:0] <= 19; // go to 19
 	end
 
-	15 : begin
+	17 : begin
 		op[15:12] <= COMP;
 		op[11:8] <= 0;//dc
 		op[7:4] <= 2; // src1
 		op[3:0] <= 12; // src0
 	end
 
-	16 : begin // if perfect
+	18 : begin // if perfect
 		op[15:12] <= JNZ;
 		op[11:8] <= 0;//dc
 		op[7:0] <= 77;// go to 77
-	end
-
-// depth check
-	17 : begin
-		op[15:12] <= CHECK;
-		op[11:8] <= 6; // src1
-		op[7:0] <= 0; // depth = 0
-	end
-
-	18 : begin
-		op[15:12] <= JNO;
-		op[11:6] <= 0; // dc
-		op[7:0] <= 6; // go to 6
 	end
 
 //reverse x
@@ -206,57 +206,57 @@ always @(pc) begin
 		op[3:0] <= 0; // dc
 	end
 
-// comp
+// depth check
 	28 : begin
+		op[15:12] <= CHECK;
+		op[11:8] <= 6; // src1
+		op[7:0] <= 0; // depth = 0
+	end
+
+	29 : begin
+		op[15:12] <= JNO;
+		op[11:6] <= 0; // dc
+		op[7:0] <= 6; // go to 6
+	end
+
+// comp
+	30 : begin
 		op[15:12] <= COMP;
 		op[11:8] <= 0;//dc
 		op[7:4] <= 0;//src1
 		op[3:0] <= 10;//src0
 	end
 
-	29 : begin
+	31 : begin
 		op[15:12] <= JNO;
 		op[11:8] <= 0;//dc
-		op[7:0] <= 34;//go to 34
+		op[7:0] <= 36;//go to 36
 	end
 
-	30 : begin
+	32 : begin
 		op[15:12] <= COMP;
 		op[11:8] <= 0;//dc
 		op[7:4] <= 1; //src1
 		op[3:0] <= 11; //src0
 	end
 
-	31 : begin
+	33 : begin
 		op[15:12] <= JNO;
 		op[11:8] <= 0;//dc
-		op[7:0] <= 34; // go to 34
+		op[7:0] <= 36; // go to 36
 	end
 
-	32 : begin
+	34 : begin
 		op[15:12] <= COMP;
 		op[11:8] <= 0;//dc
 		op[7:4] <= 2; // src1
 		op[3:0] <= 12; // src0
 	end
 
-	33 : begin // if perfect
+	35 : begin // if perfect
 		op[15:12] <= JNZ;
 		op[11:8] <= 0;//dc
 		op[7:0] <= 77;// go to 77
-	end
-
-// depth check
-	34 : begin
-		op[15:12] <= CHECK;
-		op[11:8] <= 6; // src1
-		op[7:0] <= 0; // depth = 0
-	end
-
-	35 : begin
-		op[15:12] <= JNO;
-		op[11:6] <= 0; // dc
-		op[7:0] <= 6; // go to 6
 	end
 
 //reverse y
@@ -327,57 +327,57 @@ always @(pc) begin
 		op[3:0] <= 0; // dc
 	end
 
-// comp
+// depth check
 	45 : begin
+		op[15:12] <= CHECK;
+		op[11:8] <= 6; // src1
+		op[7:0] <= 0; // src0 // depth = 0
+	end
+
+	46 : begin
+		op[15:12] <= JNO;
+		op[11:6] <= 0; // dc
+		op[7:0] <= 6; // go to 6
+	end
+
+// comp
+	47 : begin
 		op[15:12] <= COMP;
 		op[11:8] <= 0;//dc
 		op[7:4] <= 0;//src1
 		op[3:0] <= 10;//src0
 	end
 
-	46 : begin
+	48 : begin
 		op[15:12] <= JNO;
 		op[11:8] <= 0;//dc
-		op[7:0] <= 51;//go to 51
+		op[7:0] <= 53;//go to 53
 	end
 
-	47 : begin
+	49 : begin
 		op[15:12] <= COMP;
 		op[11:8] <= 0;//dc
 		op[7:4] <= 1; //src1
 		op[3:0] <= 11; //src0
 	end
 
-	48 : begin
+	50 : begin
 		op[15:12] <= JNO;
 		op[11:8] <= 0;//dc
-		op[7:0] <= 51; // go to 51
+		op[7:0] <= 53; // go to 53
 	end
 
-	49 : begin
+	51 : begin
 		op[15:12] <= COMP;
 		op[11:8] <= 0;//dc
 		op[7:4] <= 2; // src1
 		op[3:0] <= 12; // src0
 	end
 
-	50 : begin // if perfect
+	52 : begin // if perfect
 		op[15:12] <= JNZ;
 		op[11:8] <= 0;//dc
 		op[7:0] <= 77;// go to 77
-	end
-
-// depth check
-	51 : begin
-		op[15:12] <= CHECK;
-		op[11:8] <= 6; // src1
-		op[7:0] <= 0; // src0 // depth = 0
-	end
-
-	52 : begin
-		op[15:12] <= JNO;
-		op[11:6] <= 0; // dc
-		op[7:0] <= 6; // go to 6
 	end
 
 //reverse z
